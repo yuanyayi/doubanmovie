@@ -11,19 +11,19 @@ function getUrl(name) {
 // 参数字符串拼接
 function normalizeParams(obj) {
   let str = '?'
-  for(let key in obj) {
-    if(obj[key] === undefined) break;
-    str += key+'='+obj[key]+'&'
+  for (let key in obj) {
+    if (obj[key] === undefined) break;
+    str += key + '=' + obj[key] + '&'
   }
-  return str.slice(0,-1)
+  return str.slice(0, -1)
 }
 // getData
 function getMovieListData(name, option) {
-  if(!name) {
+  if (!name) {
     console.log('必须指定一个榜单名')
     return false
   }
-  if(!urls[name]) {
+  if (!urls[name]) {
     console.log('此榜单不存在！')
     return false
   }
@@ -31,20 +31,21 @@ function getMovieListData(name, option) {
     start: option.start || 0,
     count: option.count || 20
   }
-  if(name === 'search') {
-    for(let key in option.search){
+  if (name === 'search') {
+    for (let key in option.search) {
       params[key] = option.search[key]
     }
   }
   return new Promise((resolve, reject) => {
     $.ajax({
-      url: getUrl(name)+normalizeParams(params),
+      url: getUrl(name) + normalizeParams(params),
       crossDomain: true,
       dataType: "jsonp",
+      headers: { "Content-Type": "json" },
       success: (res) => {
         resolve(res);
       },
-      error: (error)=>{
+      error: (error) => {
         reject(error);
       }
     })
