@@ -13,8 +13,8 @@ $(function() {
   // 上拉加载更多
   $('main .movieList').on('scroll', (ev) => {
     let $this = $(ev.target)
-    let diff = $this.height() + $this.scrollTop() - $this.children('ul').height()
-    if (diff > -60) {
+    let diff = Math.abs($this.height() + $this.scrollTop() - $this.children('ul').height())
+    if (diff < 200) {
       movieList[$this.children('ul').prop('id').replace('List', '')].getData()
     }
     // goTop
