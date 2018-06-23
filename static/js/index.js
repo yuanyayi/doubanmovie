@@ -18,8 +18,8 @@ $(function() {
       movieList[$this.children('ul').prop('id').replace('List', '')].getData()
     }
     // goTop
-    let $goTop = $this.find('.goTop')
-    console.log($goTop.offset().top+ $this.scrollTop())
+    // let $goTop = $this.find('.goTop')
+    // console.log($goTop.offset().top+ $this.scrollTop())
     // $goTop.animate({top: $goTop.position().top + $this.scrollTop()}, 1000)
   })
   // tabs
