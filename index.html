@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>豆瓣电影</title>
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/iconfont.css">
+  <style>
+  #particles-js {
+    width: 500px;
+    height: 500px;
+    background: black;
+  }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="film">
+      <section class="movieList">
+        <ul id="top250">
+        </ul>
+        <div class="loading">
+          加载更多...<i class="iconfont icon-loading"></i>
+        </div>
+        <div class="goTop">Top</div>
+      </section>
+      <section class="movieList">
+        <ul id="beimei">
+        </ul>
+        <div class="loading">
+          加载更多...<i class="iconfont icon-loading"></i>
+        </div>
+        <div class="goTop">Top</div>
+      </section>
+      <section class="movieList">
+        <div class="searchBox">
+          <div class="row">
+            <input id="query" type="text" placeholder="搜索电影">
+            <span id="searchBtn"><i class="iconfont icon-sousuo"></i></span>
+          </div>
+          <ul id="tagLists" class="tagLists">
+            <li class="tag">剧情</li>
+            <li class="tag">喜剧</li>
+            <li class="tag">动作</li>
+            <li class="tag">爱情</li>
+            <li class="tag">科幻</li>
+            <li class="tag">悬疑</li>
+            <li class="tag">惊悚</li>
+            <li class="tag">恐怖</li>
+            <li class="tag">犯罪</li>
+            <li class="tag">同性</li>
+            <li class="tag">音乐</li>
+            <li class="tag">歌舞</li>
+            <li class="tag">传记</li>
+            <li class="tag">历史</li>
+            <li class="tag">战争</li>
+            <li class="tag">西部</li>
+            <li class="tag">奇幻</li>
+            <li class="tag">冒险</li>
+            <li class="tag">灾难</li>
+            <li class="tag">武侠</li>
+            <li class="tag">情色</li>
+          </ul>
+        </div>
+        <ul id="searchList">
+        </ul>
+        <div class="loading">
+          加载更多...<i class="iconfont icon-loading"></i>
+        </div>
+        <div class="goTop">Top</div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <ul class="tabs">
+      <li class="tab cur">
+        <div class="content">
+          <i class="iconfont icon-paihangbang"></i>
+          <p>Top250</p>
+        </div>
+      </li>
+      <li class="tab">
+        <div class="content">
+          <i class="iconfont icon-beimei"></i>
+          <p>北美</p>
+        </div>
+      </li>
+      <li class="tab">
+        <div class="content">
+          <i class="iconfont icon-sousuo"></i>
+          <p>搜索</p>
+        </div>
+      </li>
+    </ul>
+  </footer>
+</body>
+<script src="static/js/jquery-3.3.1.min.js"></script>
+<script src="static/js/api.js"></script>
+<script src="static/js/index.js"></script>
+<!-- <script>
+$('*').on('scroll', (ev)=>{
+    console.log(ev.target)
+  })
+</script> -->
+</html>
