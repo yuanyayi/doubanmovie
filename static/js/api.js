@@ -1,4 +1,4 @@
-let base_url = 'http://api.douban.com'
+let base_url = 'https://api.douban.com'
 let urls = {
   'top250': '/v2/movie/top250',
   'beimei': '/v2/movie/us_box',
