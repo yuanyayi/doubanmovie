@@ -25,7 +25,7 @@ $(function() {
   // tabs
   function switchToTab(index) {
     let film = $('main .film')
-    $('.tabs').children('.tab').removeClass('cur').eq(index).addClass('cur')
+    $('.tabs').children('.tab').eq(index).addClass('cur').siblings().removeClass('cur')
     film.animate({ left: film.offset().left - film.children().eq(index).offset().left }, 1000)
     return 'animate'
   }
